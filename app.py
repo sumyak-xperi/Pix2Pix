@@ -18,8 +18,8 @@ def getImage(image):
 
 
 st.image('xperi.png')
-st.title("Blueprint to Satellite Image Generator using Pix2Pix-GAN Algorithm")
-filepath = st.file_uploader(label = "Please Upload a Satellite Image", type=['jpg', 'png'])
+st.title("Map Blueprint to Satellite Map Image Generator using Pix2Pix-GAN Algorithm")
+filepath = st.file_uploader(label = "Please Upload a Map Blueprint", type=['jpg', 'png'])
 
 if filepath:
     with st.spinner('Generating Map Image...'):
