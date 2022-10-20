@@ -18,7 +18,7 @@ def getImage(image):
 
 
 st.image('xperi.png')
-st.title("Satellite Images to Map Generator using Pix2Pix-GAN Algorithm")
+st.title("Blueprint to Satellite Image Generator using Pix2Pix-GAN Algorithm")
 filepath = st.file_uploader(label = "Please Upload a Satellite Image", type=['jpg', 'png'])
 
 if filepath:
@@ -28,7 +28,7 @@ if filepath:
      model = tf.keras.models.load_model(filename)
     img = load_image(filepath)
     col1,col2 = st.columns([3,3])
-    col1.header("Satellite Image")
+    col1.header("Blueprint")
     col1.image(img)
 
     predic_image = getImage(img)
@@ -40,6 +40,6 @@ if filepath:
     generated_image = np.array(generated_image)
 
     
-    col2.header("Map Image")
+    col2.header("Satellite Image")
     col2.image(generated_image)
 
